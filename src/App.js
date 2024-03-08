@@ -1,24 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { Fragment } from 'react';
 
-function App() {
+function App() {//컴포넌트의 이름은 항상 대문자로 시작할것
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            K-digital 6th Kim SeYoung
+          </p>
+        </header>
+      </div>
+
   );
 }
 
