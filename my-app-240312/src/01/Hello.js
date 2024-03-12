@@ -1,6 +1,10 @@
+import "./Hello.css"
+
 function SayHello() {
     return (
-        <h1>Hello, React!</h1>
+        <>
+        <h1 style = {{backgroundColor: "lightblue"}}>Hello, React!</h1>
+        </>
     );
 }
 
