@@ -7,19 +7,14 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          K-digital 6th
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        kim-engse
       </header>
     </div>
   );
 }
 
 export default App;
+// 1. export must be exsistde cause to use module in other file
+// 2. return type reference is div>header>sequence
