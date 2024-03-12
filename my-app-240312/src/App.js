@@ -1,17 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MainHeader from "./01/MainHeader";
+import SayHello from "./01/Hello";
 
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          K-digital 6th
-        </p>
-        kim-engse
-      </header>
+      <MainHeader />
+      <SayHello />
     </div>
+    </>
   );
 }
 
