@@ -1,20 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import { Fragment } from 'react';
+import "./App.css";
+import MainHeader from "./01/MainHeader";
+import SayHello from "./01/Hello";
+import MyClock from "./01/MyClock";
+import EvenOdd from "./01/EvenOdd";
 
-function App() {//컴포넌트의 이름은 항상 대문자로 시작할것
+function App() {
   return (
-
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            K-digital 6th Kim SeYoung
-          </p>
-        </header>
-      </div>
-
+    <>
+    <div className="App">
+      <MyClock />
+      <SayHello />
+      <EvenOdd />
+    </div>
+    </>
   );
 }
 
 export default App;
+// 1. export must be exsistde cause to use module in other file
+// 2. return type reference is div>header>sequence

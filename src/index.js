@@ -2,16 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-//import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App /> 
+    <App />
   </React.StrictMode>
 );
-// 사용자 정의 태그는 항상 /붙일것
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals(); //성능과 관련된 부분, 굳이 건들 필요 없음
+//1. component starts upper char
+//   ex) App -> O           app -> X
+//   ex) App -> components  app -> html tag
+//2. react components is function, is not class
+//3. function components is js function, too
+//4. function can be maked call-back function 
+//   ex) const App = () => {
+//           return ();
+//       }
+//5. component must have return, and return can have some sequences
+reportWebVitals();
