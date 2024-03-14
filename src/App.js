@@ -1,25 +1,23 @@
-import "./App.css";
-import MainHeader from "./01/MainHeader";
-import SayHello from "./01/Hello";
-import MyClock from "./01/MyClock";
-import EvenOdd from "./01/EvenOdd";
-import Hellocss from "./01/Hellocss";
-import Hellowhite from "./02/HelloWhite";
-import HelloYellow from "./02/HellowYellow";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <>
     <div className="App">
-      <MyClock />
-      {/* <Hellocss /> */}
-      <Hellowhite />
-      <HelloYellow />
+      <div className='flex flex-col w-full max-w-screen-xl h-screen mx-auto overscroll-auto'>
+      <header className='flex justify-between h-20 bg-sky-200 text-xl font-bold'>
+        <div>React Train2</div>
+        <div>Home</div>
+      </header>
+      <main>
+        Main
+      </main>
+      <footer className='flex justify-center items-center text-white bg-slate-800 h-20'>
+        Footer
+      </footer>
     </div>
-    </>
+    </div>
   );
 }
 
 export default App;
-// 1. export must be exsistde cause to use module in other file
-// 2. return type reference is div>header>sequence
