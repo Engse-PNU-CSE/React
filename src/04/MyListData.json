@@ -14,5 +14,9 @@
     { "title" : "React" ,
       "imgUrl" : "./images/react.png",
       "content": "JavaScript library for creating user interfaces"
+    },
+    { "title" : "VSCode" ,
+      "imgUrl" : "./images/vscode.png",
+      "content": "VS Code, a free code editor by Microsoft, supports debugging, Git, syntax highlighting, and extensions for various languages."
     }
   ]

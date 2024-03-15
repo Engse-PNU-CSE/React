@@ -8,7 +8,7 @@ export default function My_List() {
     <MyList title={item.title} imgUrl={item.imgUrl} content={item.content} key={item.title}/>
   );
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-10 p-5 bg-sky-300">
         {/* <My_Html />
         <My_CSS />
         <My_Js />
