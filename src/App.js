@@ -1,6 +1,7 @@
 import "./App.css";
 import MyClock from "./01/MyClock";
-import MyDiv1 from "./03/MyDiv1";
+import My_List from "./04/My_List";
+
 function App() {
   return (
     <div className="flex flex-col w-full max-w-screen-xl mx-auto h-screen overscroll-y-auto">
@@ -10,8 +11,7 @@ function App() {
         <h1>Home</h1>
       </header>
       <main className="grow flex flex-col justify-center items-center">
-        <p className="flex justify-center items-center">Hello, VSCode</p>
-        <MyDiv1 />
+        <My_List />
       </main>
       <footer className="flex justify-center items-center text-cyan-50 bg-cyan-950 h-20">
         © 2024 KimEngse, CSE-PNU. All rights reserved.
