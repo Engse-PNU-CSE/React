@@ -1,0 +1,18 @@
+[
+    { "title" : "HTML",
+      "imgUrl" : "./images/html.png", 
+      "content": "HyperText Markup Language (HTML) is the most basic configuration of the web Elements, used to define the meaning and structure of web content"
+    },
+    { "title" : "CSS", 
+      "imgUrl" : "./images/css.png", 
+      "content":"Cascading Style Sheets (CSS) are HTML or XML (SVG, XHTML) dialects style sheet language for describing how documents are displayed, including"
+    },
+    { "title" : "JavaScript",
+      "imgUrl" : "./images/js.png", 
+      "content": " It's a scripted language for web pages that is light, interpreter, or Just-in-time compilation programming language that supports first-class functions"
+    },
+    { "title" : "React" ,
+      "imgUrl" : "./images/react.png",
+      "content": "JavaScript library for creating user interfaces"
+    }
+  ]

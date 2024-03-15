@@ -1,15 +1,24 @@
-import React from 'react'
+import React from "react";
 
 export default function My_Js() {
   return (
-    <div className="flex items-center justify-center bg-white w-2/5 h-2/5 p-5 m-5 rounded">
-      <div>
-        <img src="./images/js.png" a="js" className="h-3/5 w-3/5 p-1 m-1"/>
+    <div className="flex items-center justify-center bg-white p-5 m-5 rounded">
+      <div className="w-4/5">
+        <img src="./images/js.png" a="js" className="p-1 m-1 imgsize" />
+      </div>
+      <div className="flex flex-col justify-between">
+        <div className="flex text-2xl">
+          <h1>Js</h1>
         </div>
-      <div>
-          <p className="w-3/4 m-5">웹 페이지를 위한 스크립트 언어로 가벼운, 인터프리터 혹은 just-in-time
-              컴파일 프로그래밍 언어로, 일급 함수를 지원</p>
+        <p className="w-3/4 m-1">
+          It's a scripted language for web pages that is light, interpreter, or Just-in-time compilation programming language that supports first-class functions
+        </p>
+        <p className="flex justify-end">
+          <span className="m-1">❤️</span>
+          <span className="m-1">Like</span>
+          <span className="m-1">0</span>
+        </p>
       </div>
     </div>
-  )
+  );
 }

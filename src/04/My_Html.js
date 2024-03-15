@@ -1,15 +1,24 @@
-import React from 'react'
+import React from "react";
 
 export default function My_Html() {
   return (
-    <div className="flex items-center justify-center bg-white w-2/5 h-2/5 p-5 m-5 rounded">
-      <div>
-        <img src="./images/html.png" a="html" className="h-3/5 w-3/5 p-1 m-1"/>
+    <div className="flex items-center justify-center bg-white p-5 m-5 rounded">
+      <div className="w-2/5">
+        <img src="./images/html.png" a="html" className="p-1 m-1 imgsize" />
+      </div>
+      <div className="flex flex-col justify-between">
+        <div className="flex text-2xl">
+          <h1>Html</h1>
         </div>
-      <div>
-          <p className="w-3/4 m-5">HTML(HyperText Markup Language)은 웹을 이루는 가장 기초적인 구성
-              요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용</p>
+        <p className="w-3/4 m-1">
+          HyperText Markup Language (HTML) is the most basic configuration of the web Elements, used to define the meaning and structure of web content
+        </p>
+        <p className="flex justify-end">
+          <span className="m-1">❤️</span>
+          <span className="m-1">Like</span>
+          <span className="m-1">0</span>
+        </p>
       </div>
     </div>
-  )
+  );
 }
