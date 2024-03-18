@@ -1,6 +1,7 @@
 import "./App.css";
 import MyClock from "./01/MyClock";
 import My_List from "./04/My_List";
+import MyBoxOffice from "./05/MyBoxOffice";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <h1>Home</h1>
       </header>
       <main className="grow flex flex-col justify-center items-center">
-        <My_List />
+        <MyBoxOffice />
       </main>
       <footer className="flex justify-center items-center text-cyan-50 bg-cyan-950 h-20">
         © 2024 KimEngse, CSE-PNU. All rights reserved.
