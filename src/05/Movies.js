@@ -6,12 +6,16 @@ import { FaArrowUp , FaArrowDown} from "react-icons/fa";
 export default function Movies({rank, movieNm, salesAcc, audiAcc, rankInten}) {
   const [movies, setmovies] = useState("Select the Movie");
   
-  const clicktable = () => {  
+  const ontable = () => {  
     setmovies(`Movie Name : ${movieNm}, Total Sales : ${parseInt(salesAcc).toLocaleString()}원 , Total Audience : ${parseInt(audiAcc).toLocaleString()}명`);
     document.querySelector("#textarea").innerHTML = `${movies}`
   }
+  const leavetable = () => {  
+    // setmovies(`select movie`);
+    // document.querySelector("#textarea").innerHTML = `${movies}`
+  }
   return (
-    <tr key = {movieNm} className="bg-white hover:bg-slate-400" onClick={() => clicktable()}>
+    <tr key = {movieNm} className="bg-white hover:bg-slate-400" onMouseEnter={ontable} onMouseLeave={leavetable}>
         <th>{rank} 위</th>
         <td>{movieNm}</td>
         <td>{parseInt(salesAcc).toLocaleString()} 원</td>
