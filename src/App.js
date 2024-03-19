@@ -2,6 +2,7 @@ import "./App.css";
 import MyClock from "./01/MyClock";
 import My_List from "./04/My_List";
 import MyBoxOffice from "./05/MyBoxOffice";
+import BoxOfficeTb from "./05/BoxOfficeTb";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <MyClock />
       <header className="flex justify-between items-center text-xl font-bold h-20 p-10 bg-slate-100">
         <h1>Hello, React</h1>
-        <h1>Home</h1>
+        <h1>Home</h1> 
       </header>
       <main className="grow flex flex-col justify-center items-center">
         <MyBoxOffice />
