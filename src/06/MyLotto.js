@@ -4,14 +4,14 @@ import TailBall from "./UI/TailBall";
 import { useState } from "react";
 
 export default function MyLotto() {
-  const [currentlottos, setLottos] = useState();
+  const [currentlottos, setLottos] = useState([]);
   const handleClick = () => {
     let lottos = new Set();
     while (lottos.size < 7) {
       lottos.add(Math.floor(Math.random() * 45 + 1));
     }
       const mkLottos = [...lottos];
-      const mk1 = mkLottos.splice(0, 6).sort(function(a, b){
+      const mk1 = mkLottos.splice(0, 6).sort(function(a, b) {
         return a < b ? -1 : a > b ? 1 : 0
       })
       const bns = mkLottos

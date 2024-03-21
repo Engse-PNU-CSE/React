@@ -12,7 +12,7 @@ export default function TailBall({n, key}) {
     ]
     const ballColor = `m-3 p-3 w-16 h-16 font-bold text-xl rounded-full flex justify-center items-center ${bcolor[parseInt(n/10)]} text-white`
   return (
-    <div className= {ballColor}>
+    <div className= {ballColor} id={key}>
       {n}
     </div>
   )
