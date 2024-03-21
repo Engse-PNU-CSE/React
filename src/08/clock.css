@@ -1,0 +1,32 @@
+.clock-minutes {
+    height: 20vmin;
+    pointer-events: none;
+  }
+  .clock-hours {
+    height: 20vmin;
+    pointer-events: none;
+  }
+  .clock-seconds {
+    height: 20vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .clock-minutes {
+      animation: timerspin infinite 60s linear;
+    }
+    .clock-seconds {
+        animation: timerspin infinite 1s linear;
+      }
+      .clock-hours {
+        animation: timerspin infinite 3600s linear;
+      }
+  }
+  @keyframes    timerspin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
