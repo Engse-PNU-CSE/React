@@ -5,10 +5,20 @@ import BoxOfficeInfo from "./BoxOfficeInfo";
 import { useState } from "react";
 import TailInput from "../UI/TailInput";
 
+function formatDate(date) {
+  const d = new Date(date),
+        year = d.getFullYear(),
+        month = ('0' + (d.getMonth() + 1)).slice(-2), // getMonth()는 0부터 시작하므로 +1
+        day = ('0' + d.getDate()).slice(-2); // getDate()는 현재 일자
+  return `${year}${month}${day}`;
+}
+
 export default function RefMyBoxOffice() {
+  const today = new Date();
+  today.setDate(today.getDate() - 1);
   const[tdata, setTdata] = useState();
   const [selMv, setSelMv] = useState();
-  const [selDate, setSelDate] = useState();
+  const [selDate, setSelDate] = useState(formatDate(today));
   const inputRef = useRef();
   const [dataMovies, setDataMovies] = useState([])
 
