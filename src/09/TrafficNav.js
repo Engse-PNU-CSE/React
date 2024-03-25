@@ -1,5 +1,5 @@
 import React from 'react'
-import TailButton from '../06/UI/TailButton'
+import TailButton from '../UI/TailButton'
 
 export default function TrafficNav({title, category, sel, setSel}) {
   const handelbtclick = (item) => {
