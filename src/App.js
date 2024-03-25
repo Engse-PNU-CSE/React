@@ -1,8 +1,6 @@
 import "./App.css";
 import MyClock from "./01/MyClock";
-import RefInput from "./10/RefInput";
-
-
+import RefMyBoxOffice from "./10/MyBoxOffice";
 
 function App() {
   return (
@@ -13,7 +11,7 @@ function App() {
         <h1>Home</h1> 
       </header>
       <main className="grow flex flex-col justify-center items-center">
-        <RefInput />
+        <RefMyBoxOffice />
       </main>
       <footer className="flex justify-center items-center text-cyan-50 bg-cyan-950 h-20">
         © 2024 KimEngse, CSE-PNU. All rights reserved.
