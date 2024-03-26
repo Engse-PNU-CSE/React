@@ -8,7 +8,6 @@ export default function MySightSeeing() {
     const [tdata, setTdata] = useState()
     const [selKeyword, setSelKeyword] = useState()
     const [seldata, setSeldata] = useState()
-    const [btscancle, setBtsCancle] = useState(false)
     const getDataFetch = (url) => {
         fetch(url)
         .then(resp => resp.json())
@@ -16,7 +15,9 @@ export default function MySightSeeing() {
         .catch(err => console.log(err))
     };
     useEffect(() => {
-        if(!selKeyword) return
+        if(!selKeyword) {
+          return
+        }
         let url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?`
         url = `${url}serviceKey=${process.env.REACT_APP_SIGHTKEY}`
         url = `${url}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&keyword=${selKeyword}`
@@ -27,27 +28,31 @@ export default function MySightSeeing() {
     useEffect(() => {
         if(!tdata) return
         setSeldata(tdata.response.body.items)
-        console.log("tdata = ", tdata)
     },[tdata])
     const handleClick = () => {
+        if(!keyword.current.value) {
+          alert("input txt")
+          return
+        }
         const value = encodeURI(keyword.current.value)
-        setBtsCancle(true)
         setSelKeyword(value)
     }
     const handleCancle = () => {
-      setBtsCancle(false)
+      setSeldata()
     }
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-row">
+    <div className="flex flex-col justify-center items-center m-10 w-full">
+      <div className="flex flex-row justify-around w-2/3">
           <TailInput
             type="text"
             id="Search"
             ref={keyword}
             ph="input text..."
           />
-          <TailButton caption="Search" color="sky" handleClick={handleClick}/>
-          <TailButton caption="Cancle" color="pink" handleClick={handleCancle}/>
+          <div className="flex flex-row">
+            <TailButton caption="Search" color="sky" handleClick={handleClick}/>
+            <TailButton caption="Cancle" color="pink" handleClick={handleCancle}/>
+          </div>
       </div>
 
       <div className="flex justify-center items-center p-10">
