@@ -1,25 +1,21 @@
 import React from 'react'
 
 export default function GalleryCard({gallerylist}) {
-    const makebts = (mylist) => {
-        let bts = mylist.split(', ').map(item => 
-          <span className="bg-orange-300 text-center rounded m-1" key={item}>{item}</span>)
-        return bts
-    };
     const makeimgs = (mylist) => {
-        let change=mylist.replaceAll("http","https")
-        return <img src={change} style={{ width: '100%', height: '200px', objectFit: 'cover' }} alt={change}></img>
+        return <img src={mylist} style={{ width: '100%', height: '200px', objectFit: 'cover' }} alt={mylist}></img>
     }
-    let trs = gallerylist && gallerylist.item ? gallerylist.item.map( item => 
-        <div className="flex justify-center flex-col" key={item["galTitle"]}>
-                {makeimgs(item["galWebImageUrl"])}
-            <div className="text-2xl">{item["galTitle"]}</div>
-            <div>{item["galPhotographyLocation"]}</div>
-            <div className=" text-xs w-10/12">{makebts(item["galSearchKeyword"])}</div>
+    let trs = gallerylist ? gallerylist.map( item => 
+        <div className="flex justify-center flex-col h-full" key={item["TITLE"]}>
+                {makeimgs(item["MAIN_IMG_THUMB"])}
+            <div className="text-2xl">{item["TITLE"]}</div>
+            <div>{item["ADDR1"]}</div>
+            <div className="text-xs">{item["TRFC_INFO"]}</div>
+            <div className=" text-xs w-10/12 truncate">{item["ITEMCNTNTS"]}</div>
+            <span className="rounded-lg bg-cyan-200 inline-block">{item["USAGE_DAY_WEEK_AND_TIME"]}</span>
         </div>
         ) : null
   return (
-    <div className="grid grid-cols-3 gap-3 w-10/12">
+    <div className="grid grid-cols-2 gap-3 w-10/12 h-full">
       {trs}
     </div>
   )
