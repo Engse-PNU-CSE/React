@@ -1,7 +1,7 @@
 import fdata from "./fooddata.json";
 import FoodCard from "./FoodCard.js";
 import { useState } from "react";
-import TailButton from "../06/UI/TailButton.js";
+import TailButton from "../UI/TailButton.js"
 export default function FoodMain() {
   const [isClick, setIsClick] = useState("");
   const handleList = (citem) => {

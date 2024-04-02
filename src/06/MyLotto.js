@@ -1,6 +1,6 @@
 import React from "react";
-import TailButton from "./UI/TailButton";
-import TailBall from "./UI/TailBall";
+import TailButton from "../UI/TailButton";
+import TailBall from "../UI/TailBall";
 import { useState } from "react";
 
 export default function MyLotto() {
