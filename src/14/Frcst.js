@@ -18,22 +18,19 @@ export default function Frcst() {
   const sRef = useRef() ;
 
   const handleDate = () => {
-    console.log(dRef.current.value) ;
     setDt(dRef.current.value);
   }
 
   const handleArea = () => {
     if(sRef.current.value === '' || sRef.current.value === undefined) {
-        alert('select date!')
+        alert('select date!');
+        return;
     }
     let tm = getxy.filter(item => item['1단계'] === sRef.current.value) ;
     setX(tm[0]["격자 X"]) ;
     setY(tm[0]["격자 Y"]) ;
   }
 
-  useEffect(() => {
-    console.log(x, y)
-  } , [x, y]) ;
   const handleUltra = () => {
     navigator(`/urtra/${dt}/${sRef.current.value}/${x}/${y}`)
   }

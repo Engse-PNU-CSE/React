@@ -40,7 +40,7 @@ function App() {
       </header>
       <main className="grow flex flex-col justify-center items-center">
         <Routes>
-            <Route path='/' element={<MyClock />} />
+            <Route path='/' element={<></>} />
             <Route path='/frcst' element={<Frcst />} />
             <Route path='/lotto' element={<MyLotto />} />
             <Route path='/food' element={<FoodMain />} />
